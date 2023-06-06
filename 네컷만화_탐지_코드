@@ -1,0 +1,15 @@
+# 저자가 학습한 가중치를 활용하여 네컷만화 객체를 탐지하는 코드
+
+import os
+import subprocess
+
+weights_path = r"C:\Users\User\Desktop\chosun_project\FPC-weight.pt"
+source_path = r"E:\pdf_1920_1940_chosun_images"
+output_path = r"E:\pdf_detected_fpc_images_1920_1940"
+
+# Create the output directory if it doesn't exist
+os.makedirs(output_path, exist_ok=True)
+
+command = f"python detect.py --weights \"{weights_path}\" --source \"{source_path}\" --conf 0.6 --save-txt --project \"{output_path}\" --name result_images"
+
+subprocess.run(command, shell=True, check=True, cwd=os.path.join(os.getcwd(), "yolov5"))
