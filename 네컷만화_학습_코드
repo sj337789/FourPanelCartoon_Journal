@@ -1,4 +1,4 @@
-# 이 파이썬 코드는 Kaggle Notebook에서 실행되었습니다.
+# 이 파이썬 학습 코드는 Kaggle Notebook에서 실행되었습니다.
 
 from os import listdir 
 from os.path import isfile, join 
