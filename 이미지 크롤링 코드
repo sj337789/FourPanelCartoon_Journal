@@ -1,4 +1,5 @@
 # 조선일보 (1920-1940) 이미지 크롤링 코드
+# 파이참(PyCharm) 소프트웨어에서 파이썬 코드 사용했음.
 # 이미지 출처: 조선일보 뉴스 라이브러리 (https://newslibrary.chosun.com/)
 
 import os
