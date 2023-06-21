@@ -1,5 +1,5 @@
-# 이 파이썬 학습 코드는 Kaggle Notebook에서 실행되었습니다.
-# 레이블링 작업 후 실행한 이 파이썬 코드로 YOLOv5 미세조정을 통해 가중치를 구했습니다.
+# 이 파이썬 스크립트는 Kaggle Notebook에서 실행되었다.
+# 레이블링 작업 후 실행한 이 파이썬 코드로 YOLOv5 미세조정을 통해 가중치를 구했다.
 
 from os import listdir 
 from os.path import isfile, join 
