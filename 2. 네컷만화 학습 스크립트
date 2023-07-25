@@ -14,7 +14,6 @@ from IPython.display import Image
 %cd yolov5
 %pip install -qr requirements.txt
 
-# creating text files to the corresponding images
 cwd = '/kaggle/working/'
 
 with open(join( cwd , 'train.txt'), 'w') as f:
@@ -29,7 +28,6 @@ with open(join( cwd , 'test.txt'), 'w') as f:
     for path in glob('/kaggle/input/yonkoma-object-detectionv1iyolov5pytorch/test/images/*'):
         f.write(path+'\n')
 
-# Creating YAML file
 data = dict(
     train = join( cwd , 'train.txt'),
     val   = join( cwd , 'val.txt' ),
