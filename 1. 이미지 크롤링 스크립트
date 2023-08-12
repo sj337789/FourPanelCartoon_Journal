@@ -1,6 +1,5 @@
-# 조선일보 (1920-1940) 이미지 크롤링 스크립트
-# 파이참(PyCharm) 소프트웨어에서 파이썬 프로그래밍 언어 사용했음.
-# 파일 이미지 출처: 조선일보 뉴스 라이브러리 (https://newslibrary.chosun.com/)
+# Web crawling script for Chosun News Library (조선일보 뉴스 라이브러리: https://newslibrary.chosun.com/)
+# This script was executed on the Pycharm software on the Windows 10 Operating System.
 
 import os
 import pandas as pd
@@ -9,7 +8,6 @@ from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
 
 data = pd.read_csv('C:/Users/User/Desktop/chosun_1920to1940_link.csv', header=None)
-
 image_urls = data[0].tolist()
 
 destination_folder = 'E:/jpg_1920_1940_chosun_images/'
@@ -19,14 +17,11 @@ def download_image(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-
         file_name = url.rsplit("/", 1)[-1]
         file_path = os.path.join(destination_folder, file_name)
         with open(file_path, "wb") as f:
             f.write(response.content)
-
         print(f"Downloaded: {url}")
-
     except requests.exceptions.RequestException as e:
         print(f"Failed to download {url}. Error: {e}")
 
