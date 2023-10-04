@@ -12,3 +12,6 @@ os.makedirs(output_path, exist_ok=True)
 command = f"python detect.py --weights \"{weights_path}\" --source \"{source_path}\" --conf 0.6 --save-txt --project \"{output_path}\" --name result_images"
 
 subprocess.run(command, shell=True, check=True, cwd=os.path.join(os.getcwd(), "yolov5"))
+
+
+
