@@ -17,15 +17,15 @@ from IPython.display import Image
 cwd = '/kaggle/working/'
 
 with open(join( cwd , 'train.txt'), 'w') as f:
-    for path in glob('/kaggle/input/yonkoma-object-detectionv1iyolov5pytorch/train/images/*'):
+    for path in glob('/kaggle/input/data-fpc-dataset/train/images/*'):
         f.write(path+'\n')
             
 with open(join( cwd , 'val.txt'), 'w') as f:
-    for path in glob('/kaggle/input/yonkoma-object-detectionv1iyolov5pytorch/valid/images/*'):
+    for path in glob('/kaggle/input/data-fpc-dataset/valid/images/*'):
         f.write(path+'\n')
 
 with open(join( cwd , 'test.txt'), 'w') as f:
-    for path in glob('/kaggle/input/yonkoma-object-detectionv1iyolov5pytorch/test/images/*'):
+    for path in glob('/kaggle/input/data-fpc-dataset/test/images/*'):
         f.write(path+'\n')
 
 data = dict(
@@ -33,13 +33,13 @@ data = dict(
     val   = join( cwd , 'val.txt' ),
     test = join(cwd, 'test.txt'),
     nc    = 2, # number of class = 1
-    names = ['Yonkoma_2x2', 'Yonkoma_4x1']
+    names = ['FPC_2x2', 'FPC_4x1']
     )
 
-with open(join( cwd , 'Yonkoma.yaml'), 'w') as outfile:
+with open(join( cwd , 'fpc.yaml'), 'w') as outfile:
     yaml.dump(data, outfile, default_flow_style=False)
 
-f = open(join( cwd , 'Yonkoma.yaml'), 'r')
+f = open(join( cwd , 'fpc.yaml'), 'r')
 print('\nyaml:')
 print(f.read())
     
