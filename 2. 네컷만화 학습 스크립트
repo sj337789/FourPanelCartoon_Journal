@@ -33,10 +33,10 @@ data = dict(
     names = ['FPC_2x2', 'FPC_4x1']
     )
 
-with open(join( cwd , 'Yonkoma.yaml'), 'w') as outfile:
+with open(join( cwd , 'fpc.yaml'), 'w') as outfile:
     yaml.dump(data, outfile, default_flow_style=False)
 
-f = open(join( cwd , 'Yonkoma.yaml'), 'r')
+f = open(join( cwd , 'fpc.yaml'), 'r')
 print('\nyaml:')
 print(f.read())
     
