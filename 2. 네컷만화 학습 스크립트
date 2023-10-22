@@ -30,7 +30,7 @@ data = dict(
     val   = join( cwd , 'val.txt' ),
     test = join(cwd, 'test.txt'),
     nc    = 2, # number of class = 1
-    names = ['Yonkoma_2x2', 'Yonkoma_4x1']
+    names = ['FPC_2x2', 'FPC_4x1']
     )
 
 with open(join( cwd , 'Yonkoma.yaml'), 'w') as outfile:
