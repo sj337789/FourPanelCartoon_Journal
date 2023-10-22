@@ -30,15 +30,15 @@ data = dict(
     val   = join( cwd , 'val.txt' ),
     test = join(cwd, 'test.txt'),
     nc    = 2, # number of class = 1
-    names = ['FPC_2x2', 'FPC_4x1']
+    names = ['Yonkoma_2x2', 'Yonkoma_4x1']
     )
 
-with open(join( cwd , 'fpc.yaml'), 'w') as outfile:
+with open(join( cwd , 'Yonkoma.yaml'), 'w') as outfile:
     yaml.dump(data, outfile, default_flow_style=False)
 
-f = open(join( cwd , 'fpc.yaml'), 'r')
+f = open(join( cwd , 'Yonkoma.yaml'), 'r')
 print('\nyaml:')
 print(f.read())
     
 # 학습 시작. (Batch_size = 8, epoch =1000, patience = 30)
-!python train.py --batch 8 --epochs 1000 --data /kaggle/working/fpc.yaml --patience 50
+!python train.py --batch 8 --epochs 1000 --data /kaggle/working/Yonkoma.yaml --patience 30
