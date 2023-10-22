@@ -1,5 +1,4 @@
 # Web Crawling script for Chosun News Library (조선일보 뉴스 라이브러리: https://newslibrary.chosun.com/)
-# This script was executed on the PyCharm software on the Windows 10 Operating System.
 
 import os
 import pandas as pd
