@@ -40,5 +40,4 @@ f = open(join( cwd , 'fpc.yaml'), 'r')
 print('\nyaml:')
 print(f.read())
     
-# 학습 시작. (Batch_size = 8, epoch =1000, patience = 30)
 !python train.py --batch 8 --epochs 1000 --data /kaggle/working/fpc.yaml --patience 30
