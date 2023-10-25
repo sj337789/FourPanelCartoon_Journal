@@ -29,7 +29,7 @@ data = dict(
     train = join( cwd , 'train.txt'),
     val   = join( cwd , 'val.txt' ),
     test = join(cwd, 'test.txt'),
-    nc    = 2, # number of class = 1
+    nc    = 2
     names = ['FPC_2x2', 'FPC_4x1']
     )
 
