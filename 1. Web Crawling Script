@@ -9,8 +9,8 @@ from PIL import Image
 data = pd.read_csv('C:/Users/User/Desktop/chosun_1920to1940_link.csv', header=None)
 image_urls = data[0].tolist()
 
-destination_folder = 'E:/jpg_1920_1940_chosun_images/'
-os.makedirs(destination_folder, exist_ok=True)
+chosun_1920to1940 = 'E:/jpg_1920_1940_chosun_images/'
+os.makedirs(chosun_1920to1940, exist_ok=True)
 
 def download_image(url):
     try:
