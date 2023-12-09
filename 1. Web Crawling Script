@@ -1,4 +1,5 @@
-# Web Crawling script for Chosun News Library (조선일보 뉴스 라이브러리: https://newslibrary.chosun.com/)
+# Image Crawling script for Chosun News Library 
+# 출처: (조선일보 뉴스 라이브러리: https://newslibrary.chosun.com/)
 
 import os
 import pandas as pd
@@ -6,10 +7,10 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
 
-data = pd.read_csv('C:/Users/User/Desktop/chosun_1920to1940_link.csv', header=None)
+data = pd.read_csv("C:/Users/User/Desktop/chosun_1920to1940_link.csv", header=None)
 image_urls = data[0].tolist()
 
-chosun_1920to1940 = 'E:/jpg_1920_1940_chosun_images/'
+chosun_1920to1940 = "E:/jpg_1920_1940_chosun_images/"
 os.makedirs(chosun_1920to1940, exist_ok=True)
 
 def download_image(url):
