@@ -1,5 +1,5 @@
-# Image Crawling script for Chosun News Library 
-# 출처: (조선일보 뉴스 라이브러리: https://newslibrary.chosun.com/)
+# Image Crawling script for the Chosun News Library 
+# (https://newslibrary.chosun.com/)
 
 import os
 import pandas as pd
