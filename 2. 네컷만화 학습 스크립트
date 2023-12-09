@@ -1,3 +1,5 @@
+# Fine-tuning Script for FPC
+
 from os import listdir 
 from os.path import isfile, join 
 import yaml 
@@ -11,33 +13,33 @@ from IPython.display import Image
 %cd yolov5
 %pip install -qr requirements.txt
 
-cwd = '/kaggle/working/'
+cwd = "/kaggle/working/"
 
-with open(join( cwd , 'train.txt'), 'w') as f:
-    for path in glob('/kaggle/input/data-fpc-dataset/train/images/*'):
-        f.write(path+'\n')
+with open(join(cwd , "train.txt"), "w") as f:
+    for path in glob("/kaggle/input/data-fpc-dataset/train/images/*"):
+        f.write(path+"\n")
             
-with open(join( cwd , 'val.txt'), 'w') as f:
-    for path in glob('/kaggle/input/data-fpc-dataset/valid/images/*'):
-        f.write(path+'\n')
+with open(join(cwd , "val.txt"), "w") as f:
+    for path in glob("/kaggle/input/data-fpc-dataset/valid/images/*"):
+        f.write(path+"\n")
 
-with open(join( cwd , 'test.txt'), 'w') as f:
-    for path in glob('/kaggle/input/data-fpc-dataset/test/images/*'):
-        f.write(path+'\n')
+with open(join(cwd , "test.txt"), "w") as f:
+    for path in glob("/kaggle/input/data-fpc-dataset/test/images/*"):
+        f.write(path+"\n")
 
 data = dict(
-    train = join( cwd , 'train.txt'),
-    val   = join( cwd , 'val.txt' ),
-    test = join(cwd, 'test.txt'),
+    train = join(cwd , "train.txt"),
+    val   = join(cwd , "val.txt"),
+    test = join(cwd, "test.txt"),
     nc    = 2
-    names = ['FPC_2x2', 'FPC_4x1']
+    names = ["FPC_2x2", "FPC_4x1"]
     )
 
-with open(join( cwd , 'fpc.yaml'), 'w') as outfile:
+with open(join(cwd , "fpc.yaml"), "w") as outfile:
     yaml.dump(data, outfile, default_flow_style=False)
 
-f = open(join( cwd , 'fpc.yaml'), 'r')
-print('\nyaml:')
+f = open(join(cwd , "fpc.yaml"), "r")
+print("\nyaml:")
 print(f.read())
     
 !python train.py --batch 8 --epochs 1000 --data /kaggle/working/fpc.yaml --patience 30
